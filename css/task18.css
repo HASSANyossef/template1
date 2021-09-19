@@ -1,0 +1,249 @@
+*,body{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body{
+    background-color: #f0f0f2;;
+}
+
+
+:root{
+    --fristcolor: #ff2020;
+    --secondcolor:#0b1c39;
+
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+
+}
+
+nav .logo{
+    padding: 30px;
+
+}
+
+nav .logo img{
+    width: 100%;
+}
+
+
+nav .nav-list{
+    display: flex;
+    justify-content: left;
+    width: 55%;
+}
+
+nav .nav-list .list-item{
+    list-style: none;
+    margin: 22px;
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+
+nav .nav-list a{
+    text-decoration: none;
+    color: var(--secondcolor);
+}
+
+
+
+nav .nav-list .list-item:nth-child(4)::before{
+       content: "HOT";
+    position: absolute;
+    left: 30px;
+    top: -33px;
+    font-size: 12px;
+    color: white;
+    width: 44px;
+    height: 20px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 10px;
+    background-color: var(--fristcolor);
+    filter: drop-shadow(2px 2px 2px black);
+}
+
+
+
+nav .nav-list .list-item :hover{
+    color: var(--fristcolor);
+}
+
+
+nav .nav-list .list-item .dropdown{
+    position: absolute;
+    list-style: none;
+    width: 170px;
+    top: 50px;
+    background-color: #f8f9fa;
+    padding: 21px;
+    border-top: 3px solid  var(--fristcolor);
+    border-radius: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+}
+
+nav .nav-list .list-item .dropdown::before{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-top: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 7px solid #ff2020;
+    top: -23px;
+}
+
+nav .nav-list .list-item:hover .dropdown{
+    opacity: 1;
+    visibility: visible;
+    top: 40px;
+}
+
+nav .nav-list .list-item .dropdown .drop{
+    margin-bottom: 10px;
+}
+
+
+nav .social{
+    width: 15%;
+    height: 100%;
+    padding-left: 30px;
+}
+
+nav .social i{
+    margin-top: 40px;
+    margin-right: 20px;
+    color: var(--secondcolor);
+}
+
+
+nav .social i:hover{
+    color: var(--fristcolor);
+}
+
+
+nav label, nav #inp{
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1119px) {
+    
+}
+
+
+@media (max-width:991px) {
+    /* ====================navbar======================== */
+    nav label{
+        display: block;
+        order: 2;
+        margin: 45px;
+    }
+
+
+    nav .nav-list {
+    display: unset;
+    position: absolute;
+    background-color: #ccc;
+    top: 100px;
+    left: 2%;
+    width: 90%;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+}
+
+    nav #inp:checked ~ .nav-list{
+    opacity: 1;
+    visibility: visible;
+    top: 80px;
+    }
+
+
+nav .nav-list .list-item:nth-child(4)::before{
+    display: none;
+}
+
+
+nav .nav-list .list-item .dropdown {
+    position: unset;
+    list-style: none;
+    width: 157px;
+    top: 50px;
+    background-color:transparent;
+    padding: 10px 15px;
+    border-top:0;
+    border-radius: 0;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    transition:0;
+    -webkit-transition:0;
+    -moz-transition:0;
+    -ms-transition:0;
+    -o-transition:0;
+}
+
+nav .nav-list .list-item:hover .dropdown{
+    display: block;
+}
+
+nav .nav-list .list-item .dropdown::before{
+    display: none;
+}
+nav .social {
+    width: 40%;
+    padding-left: 60px;
+}
+
+@media (max-width: 767px) {
+    
+}
+
+@media (max-width: 575px) {
+    
+        }}
