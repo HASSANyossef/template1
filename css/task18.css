@@ -4,9 +4,11 @@
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
 }
-body{
+
+
+/* body{
     background-color: #f0f0f2;;
-}
+} */
 
 
 :root{
@@ -22,7 +24,9 @@ nav{
     justify-content: space-between;
     align-items: center;
     background-color: #fff;
-
+    position: sticky;
+    top: 0px;
+    z-index: 5;
 }
 
 nav .logo{
@@ -142,6 +146,108 @@ nav .social i:hover{
 nav label, nav #inp{
     display: none;
 }
+/* ========================header============================== */
+
+
+.content{
+    background-color:  #f0f0f2;
+    overflow: hidden;
+}
+
+.content .boxs{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 90%;
+    margin: auto;
+}
+
+
+.content .boxs .header{
+    align-self: center;
+    margin-left: 60px;
+    position: relative;
+}
+
+.content .boxs .header h1{
+    color: var(--secondcolor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 100px;
+    line-height: 1.2;
+    margin-bottom: 26px;
+    font-weight: 900;
+
+
+}
+
+.content .boxs .header p{
+    color: #212025;
+    width: 85%;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+
+.content .boxs .header .but{
+    background-color:#4a4a4b;
+    padding: 16px 24px;
+    position: relative;
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    z-index: 1;
+   
+}
+
+.but::before{
+     content: "";
+     position: absolute;
+     left: 0px;
+     top: 0px;
+     width: 0%;
+     height: 100%;
+     background-color: var(--fristcolor);
+     z-index: -1;
+     transition: all 0.3s linear;
+     -webkit-transition: all 0.3s linear;
+     -moz-transition: all 0.3s linear;
+     -ms-transition: all 0.3s linear;
+     -o-transition: all 0.3s linear;
+}
+
+
+.but:hover:before{
+    width: 100%;
+}
+
+
+.content .boxs .img1{
+    animation-name: imgscale;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction:alternate;
+}
+
+@keyframes imgscale{
+    0%{ transform:scale(1) ;
+        -webkit-transform:scale(1) ;
+        -moz-transform:scale(1) ;
+        -ms-transform:scale(1) ; 
+        -o-transform:scale(1) ; }
+        100%{
+            transform: scale(1.05);
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -o-transform: scale(1.05);
+}
+}
 
 
 
@@ -167,6 +273,31 @@ nav label, nav #inp{
 
 
 @media (max-width: 1119px) {
+    /* ===============header=================== */
+    .content .boxs .header{
+    margin-top: 30px;
+    margin-left: 80px;
+    height: 390px;
+    width: 100%;
+    }
+    .content .boxs .header h1{
+    font-size: 60px;
+    }
+
+    .content .boxs .header p{
+    font-size: 20px;
+    width: 600px;
+    }
+    
+
+    .content .boxs .img1{
+    margin-right: 54px;
+    }
+
+
+    .content .boxs .img1 img{
+    width: 150px;
+    } 
     
 }
 
@@ -235,15 +366,87 @@ nav .nav-list .list-item:hover .dropdown{
 nav .nav-list .list-item .dropdown::before{
     display: none;
 }
+
 nav .social {
     width: 40%;
     padding-left: 60px;
 }
+  /* ===============header=================== */
+    .content .boxs .header{
+    margin-top: 30px;
+    margin-left: 80px;
+    height: 390px;
+    width: 100%;
+    }
+    .content .boxs .header h1{
+    font-size: 52px;
+    }
+
+    .content .boxs .header p{
+    font-size: 20px;
+    width: 450px;
+    }
+    
+
+    .content .boxs .img1{
+    margin-right: 54px;
+    }
+
+
+    .content .boxs .img1 img{
+    width: 150px;
+    } 
+}
+
+
 
 @media (max-width: 767px) {
+    /* ===============header=================== */
+    .content .boxs .header{
+    margin-top: 30px;
+    margin-left: 80px;
+    height: 390px;
+    width: 100%;
+    }
+    .content .boxs .header h1{
+    font-size: 40px;
+    }
+
+    .content .boxs .header p{
+    font-size: 20px;
+    width: 300px;
+    }
     
+
+    .content .boxs .img1{
+    margin-right: 54px;
+    }
+
+
+    .content .boxs .img1 img{
+    width: 150px;
+    }  
 }
 
 @media (max-width: 575px) {
-    
-        }}
+    /* ===============header=================== */
+    .content .boxs .header{
+    margin-top: 80px;
+    margin-left: 20px;
+    height: 390px;
+    }
+
+
+    .content .boxs .header h1{
+    font-size: 35px;
+    width: 110%;
+    }
+
+    .content .boxs .header p{
+        width: 100%;
+    }
+
+    .content .boxs .img1{
+        display: none;
+    }
+}  
